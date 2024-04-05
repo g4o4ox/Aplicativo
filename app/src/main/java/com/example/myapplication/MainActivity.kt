@@ -24,11 +24,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                     val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = "mainScreen"){
+                    NavHost(navController = navController, startDestination = "mainScreen",){
                         composable(
                             route = "mainScreen"
-                        ){
+                        ) {
                             MainScreen(navController)
+
                         }
 
 
@@ -38,15 +39,5 @@ class MainActivity : ComponentActivity() {
                 }// fechamento de colchetes para a navControler
             }
         }
-    }
-}
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyApplicationTheme {
-
-
     }
 }
