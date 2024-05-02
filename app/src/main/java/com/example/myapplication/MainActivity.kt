@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import RollGame
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,7 +18,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import com.example.myapplication.view.MainScreen
-import com.example.myapplication.view.RollGame
 import com.example.myapplication.view.UserPerfil
 
 class MainActivity : ComponentActivity() {
