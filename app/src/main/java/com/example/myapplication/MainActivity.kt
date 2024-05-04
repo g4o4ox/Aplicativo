@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import RollGame
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,7 +17,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.myapplication.ui.theme.MyApplicationTheme
+import com.example.myapplication.view.GameList
 import com.example.myapplication.view.MainScreen
+import com.example.myapplication.view.UserPerfil
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,29 +27,22 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                     val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = "mainScreen"){
-                        composable(
-                            route = "mainScreen"
-                        ){
+                    NavHost(navController = navController, startDestination = "mainScreen",){
+                        composable(route = "mainScreen") {
                             MainScreen(navController)
                         }
-
-
-                        //caso seja adicionado mais telas. usar a mesma syntax acima
-
-
+                        composable(route = "RollGame"){
+                            RollGame(navController)
+                        }
+                        composable(route = "UserPerfil"){
+                            UserPerfil(navController)
+                        }
+                        composable(route="GameList"){
+                            GameList(navController)
+                        }
+                    //caso seja adicionado mais telas. usar a mesma syntax acima
                 }// fechamento de colchetes para a navControler
             }
         }
-    }
-}
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyApplicationTheme {
-
-
     }
 }
