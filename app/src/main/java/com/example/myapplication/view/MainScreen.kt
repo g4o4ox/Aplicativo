@@ -15,6 +15,7 @@ import androidx.navigation.NavController
 fun MainScreen(navController: NavController){
 
     Box(modifier= Modifier.fillMaxSize()){
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -23,10 +24,8 @@ fun MainScreen(navController: NavController){
                 .padding(16.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            TextButton(onClick = { /* Ação do Botão 1 */ }) {
-                Text("Botão 1")
-            }
-            TextButton(onClick = { navController.navigate(route = "RollGame") }) {
+
+            TextButton(onClick = { navController.navigate(route = "GameList") }) {
                 Text("Jogar")
             }
             TextButton(onClick = { navController.navigate(route = "UserPerfil")}) {
@@ -34,4 +33,5 @@ fun MainScreen(navController: NavController){
             }
         }
     }
+
 }

@@ -45,9 +45,9 @@ fun RollGame(navController: NavController) {
         }
 
         Button(onClick = {
-            rotationState += (360 * 5 + (0..359).random()).toFloat()
+            rotationState += (360 * 10 + (0..359).random()).toFloat()
         }) {
             Text("Girar")
-        }
+        } // button
     }
 }

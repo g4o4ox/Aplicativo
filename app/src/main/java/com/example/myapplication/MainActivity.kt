@@ -17,6 +17,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.myapplication.ui.theme.MyApplicationTheme
+import com.example.myapplication.view.GameList
 import com.example.myapplication.view.MainScreen
 import com.example.myapplication.view.UserPerfil
 
@@ -35,6 +36,9 @@ class MainActivity : ComponentActivity() {
                         }
                         composable(route = "UserPerfil"){
                             UserPerfil(navController)
+                        }
+                        composable(route="GameList"){
+                            GameList(navController)
                         }
                     //caso seja adicionado mais telas. usar a mesma syntax acima
                 }// fechamento de colchetes para a navControler
